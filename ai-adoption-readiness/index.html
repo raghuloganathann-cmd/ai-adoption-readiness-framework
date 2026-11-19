@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Adoption Readiness Framework</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Public+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>AI Adoption Readiness Framework</h1>
+  <p class="lead">Rate how true each statement is for your organization today, from 1 (not at all) to 5 (fully). You'll get an overall score, a profile across six areas, and next steps for the weakest ones.</p>
+
+  <section id="quiz">
+    <div class="bar"><div class="track"><div class="fill" id="fill"></div></div><div class="count" id="count">0 of 18 answered</div></div>
+    <form id="form" onsubmit="return false"></form>
+    <div class="actions">
+      <button class="primary" id="submit" disabled>See my results</button>
+      <span class="hint" id="hint">Answer all 18 statements to continue.</span>
+    </div>
+  </section>
+
+  <section id="results" aria-live="polite">
+    <div class="hero">
+      <div class="score" id="score">0%</div>
+      <div class="level"><h2 id="lvl"></h2><p id="lvlText"></p></div>
+    </div>
+    <div class="panel"><svg class="radar" id="radar" viewBox="0 0 400 360" role="img" aria-label="Radar chart of readiness by area"></svg></div>
+    <div class="panel" id="bars"></div>
+    <div class="panel rec" id="recs"></div>
+    <div class="actions"><button class="ghost" id="redo">Retake assessment</button></div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
